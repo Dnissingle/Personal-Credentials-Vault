@@ -26,6 +26,7 @@ class DashboardScreen extends StatelessWidget {
           crossAxisCount: 3,
           mainAxisSpacing: 16,
           crossAxisSpacing: 16,
+          childAspectRatio: 0.85,
           children: [
             VaultCategoryCard(
               icon: Icons.person_outline,
@@ -41,16 +42,16 @@ class DashboardScreen extends StatelessWidget {
             ),
             VaultCategoryCard(
               icon: Icons.description_outlined,
-              title: 'Documents',
+              title: 'ID Documents',
               subtitle: '0 saved',
               onTap: () => Navigator.pushNamed(context, AppRoutes.documents),
             ),
-            // VaultCategoryCard(
-            //   icon: Icons.account_box,
-            //   title: 'Certificates',
-            //   subtitle: '0 saved',
-            //   onTap: () => Navigator.pushNamed(context, AppRoutes.documents),
-            // ),
+            VaultCategoryCard(
+              icon: Icons.account_box,
+              title: 'Certificates',
+              subtitle: '0 saved',
+              onTap: () => Navigator.pushNamed(context, AppRoutes.documents),
+            ),
             VaultCategoryCard(
               icon: Icons.screen_lock_portrait,
               title: 'App Locker',

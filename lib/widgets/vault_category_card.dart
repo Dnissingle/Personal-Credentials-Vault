@@ -29,17 +29,25 @@ class VaultCategoryCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CircleAvatar(
-                radius: 22,
+                radius: 16,
                 backgroundColor: colorScheme.primaryContainer,
                 child: Icon(icon, color: colorScheme.onPrimaryContainer),
               ),
-              const SizedBox(height: 12),
-              Text(title, style: Theme.of(context).textTheme.titleMedium),
-              const SizedBox(height: 4),
+              const SizedBox(height: 10),
+              Text(
+                title,
+                style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                  fontSize: 10.0,
+                  fontWeight: FontWeight.bold
+                ),
+              ),
+
+              const SizedBox(height: 16),
               Text(
                 subtitle,
                 style: Theme.of(context).textTheme.bodySmall?.copyWith(
                       color: colorScheme.onSurfaceVariant,
+                  fontSize: 10.0, // Set your desired font size here
                     ),
               ),
             ],
